@@ -29,18 +29,33 @@ int maxsubsummemo(vector<int>vec,int n,vector<int>dp){
 int maxsubsumiterative(vector<int>vec,int n,vector<int>dp){
     dp[0]=vec[0];
     int neg=0;
-   for(int i=0; i<n;i++){
-       int pick = vec[i]+(i>1)?dp[i-2]:0;
+   for(int i=1; i<n;i++){
+       int pick = vec[i];
+       if(i>1)pick+=dp[i-2];
        int notpick =dp[i-1];
        dp[i]=min(pick,notpick);
    }
    return dp[n-1];
 }
-
+// spave optimization
+int maxsubssumspace(vector<int>vec){
+    int n=vec.size();
+    int prev=vec[0];
+    int prev2=0;
+   for(int i=1; i<n;i++){
+     int take= vec[i];
+     if(i>1)take+=prev2;
+     int notake =0+prev;
+     int curr= max(take,notake);
+     prev2=prev;
+     prev=curr;
+   }
+   return prev;
+}
 
 int main(){
     vector<int>vec={1,3,4,5,6,7};
     vector<int>dp(6,-1);
-    cout<<maxsubsumiterative(vec, 6,dp);
+    cout<<maxsubssumspace(vec);
     return 0;
 }
