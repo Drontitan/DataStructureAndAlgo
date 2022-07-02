@@ -7,7 +7,7 @@ typedef long long ll;
 bool subsetsum(vector<int>vec,int i,int target){
     
    if(target==0)return true;
-   if(i==0)return vec[0]==target;
+   if(i==0)return vec[0]==target; // if we are standing at the o th index can the target can be achived if and only if the target equals that element 
    bool  nottake= subsetsum(vec,i-1,target);
    bool take= false;
    if(vec[i]<=target){
@@ -35,7 +35,7 @@ bool subsetsummemo(vector<int>vec,int i,int target,vector<vector<int>>&dp){
 bool subsetsumiterative(vector<int>vec,int n,int k,vector<vector<bool>>&dp){
     
   for (int i = 0; i <n; i++){
-    dp[i][0]=true;
+    dp[i][0]=true;// any moment the target is 0 then the base case we will be following 
   }
   dp[0][vec[0]]=true;
   for(int i= 1;i<n;i++){
@@ -82,6 +82,5 @@ int main(){
      cout<<subsetsummemo(vec,vec.size()-1,m,dp)<<endl;
      cout<<subsetsumiterative(vec,vec.size(),m,dpit)<<endl;
      cout<<subsetsumspace(vec,vec.size(),m);
-
     return 0;
 }

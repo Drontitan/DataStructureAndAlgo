@@ -19,7 +19,7 @@ int maxsubsummemo(vector<int>vec,int n,vector<int>dp){
     if(n==0)return vec[n];
     if(n<0)return 0;
      if(dp[n]!=-1)return dp[n];
-    int pick = vec[n]+maxsubsum(vec,n-2);
+    int pick = vec[n]+maxsubsum(vec,n-2);// here n-2 because no adjacent element could be pick 
     int notpick = maxsubsum(vec,n-1);
 
     return dp[n]=max(pick,notpick);
@@ -28,7 +28,6 @@ int maxsubsummemo(vector<int>vec,int n,vector<int>dp){
 // itrativesolution
 int maxsubsumiterative(vector<int>vec,int n,vector<int>dp){
     dp[0]=vec[0];
-    int neg=0;
    for(int i=1; i<n;i++){
        int pick = vec[i];
        if(i>1)pick+=dp[i-2];

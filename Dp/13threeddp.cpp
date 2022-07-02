@@ -13,8 +13,8 @@ int recursion3d(vector<vector<int>>vec,int i,int j1 ,int j2,int n ,int m){
 
     if(j1<0 || j1>=m || j2<0 || j2>=m)return -1e8;
     int maxi=-1e8;
-    for(int d1=-1 ;d1<=1;d1++){
-        for(int d2=-1;d2<=1;d2++){
+    for(int d1=-1 ;d1<=1;d1++){// one combo for the alice and there will be three more combos fot the bobs
+        for(int d2=-1;d2<=1;d2++){// so that there will be total of the 9 combos 
             int value=0;
                if(j1==j2)value=vec[i][j1];
                else  value=vec[i][j1]+vec[i][j2];

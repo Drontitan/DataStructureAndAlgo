@@ -9,7 +9,7 @@ int solve(int day,int last, vector<vector<int>>&points){
     if(day==0){
         int maxi=0;
         for(int task=0;task<3;task++){
-            if(task!=last){
+            if(task!=last){ // task that was not performed on the last day  
                 maxi=max(maxi,points[0][task]);
             }
         }

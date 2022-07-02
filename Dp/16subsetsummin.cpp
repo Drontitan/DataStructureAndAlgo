@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef long long ll;
-
+// nice question it is the kind of you should solve this questin previsiously 
 int main()
 {
     vector<int> vec = {1, 2, 3, 4};
@@ -33,7 +33,8 @@ int main()
     // dp[n-1][1... col]
 
     int mini = 1e9;
-    for (int s1 = 0; s1 <= totalsum / 2; s1++)
+    for (int s1 = 0; s1 <= totalsum / 2; s1++)// here we have checked the sum from 0 to totalsum that are possible then we have traversed till half only beacause we 
+    // will be getting the automatically the other half sum 
     {
         if (dp[n - 1][s1] == true)
         {

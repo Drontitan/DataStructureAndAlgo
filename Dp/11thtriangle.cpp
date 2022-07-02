@@ -17,7 +17,7 @@ in triangle
 6 7 8 9 
 
 
-we can move directly down or diafonally botoom manner  only 
+we can move directly down or digonally botoom manner  only 
 
 */
 // recursion

@@ -5,7 +5,7 @@ typedef long long ll;
 
 int kthjump(vector<int>vec,int n,int k){
     if(n==0)return 0;
-    int minsteps=INT_MAX;
+    int minsteps=1e9;
     for (int j =1; j<=k;j++){
         if(n-j>0){
        int jumps= kthjump(vec,n-j,k)+abs(vec[n]-vec[n-j]);

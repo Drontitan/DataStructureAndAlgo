@@ -15,7 +15,7 @@ int maximumpathsum(vector<vector<int>>&vec,int i,int j){
 
      return max(up,max(rightdiagonal,leftdiagonal));
 }
-// memoizatoin solution 
+// memoization solution 
 
 int maximumpathsummemo(vector<vector<int>>&vec,int i,int j,vector<vector<int>>&dp){
      if(j<0||j>=vec[0].size())return -1e8;
