@@ -18,7 +18,9 @@ typedef long long ll;
 
 
 // tabulation bottom to up
-// shifying og the index so here 0  will be -1 ans n as n-1 and m as m-1
+// shifting fg the index so here 0  will be -1 ans n as n-1 and m as m-1
+
+// here we have ans through the dp table that was generated 
 int longestcommonsubiterative(string str1, string str2, int n, int m, vector<vector<int>> &dp)
 {
     for (int i = 0; i <= n; i++)
@@ -38,15 +40,41 @@ int longestcommonsubiterative(string str1, string str2, int n, int m, vector<vec
             else dp[i][j] = 0; // notmatch
         }
     }
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= m; j++)
+        {
+           cout<<dp[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 
+    int i=n,j=m;
+    cout<<dp[i-1][j-1]<<endl;
+    string s="";
+    while(i>0 && j>0){
+      if(dp[i][j]==ans )break;
+      else if(dp[i-1][j]>dp[i][j-1]) i--;
+       else j--;
+    //   i--,j--;  
+     }
+        cout<<i<<j<<endl;
+         while(i>0 && j>0 ){
+         if(str1[i-1]==str2[j-1]){
+             s+=str1[i-1];
+             i--,j--;
+         }
+         else break;
+     }
+     cout<<s<<endl;
    return ans;
 }
 
 
 int main()
 {
-    string str1 = "abcde";
-    string str2 = "abcdgek";
+    string str1 = "abb";
+    string str2 = "bba";
     int n = str1.size();
     int m = str2.size();
     vector<vector<int>> dpit(n + 1, vector<int>(m + 1, 0));

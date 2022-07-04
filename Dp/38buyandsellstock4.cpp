@@ -52,7 +52,7 @@ int buyandsellstockmemo(int i, int buy,int cap, vector<int> &vec, vector<vector<
 }
 
 // tabulation
-int buyandsellstockitertive(int n, vector<int> vec, vector<vector<vector<int>>> &dp)
+int buyandsellstockitertive(int n, int k,vector<int> vec, vector<vector<vector<int>>> &dp)
 {
 
     for(int i=0 ;i<=n;i++){
@@ -61,7 +61,7 @@ int buyandsellstockitertive(int n, vector<int> vec, vector<vector<vector<int>>> 
         }
     }
     for(int buy =0 ;buy<=1;buy++){
-        for(int cap =0 ;cap<=2;cap++){
+        for(int cap =0 ;cap<=k;cap++){
             dp[n][buy][cap]=0;
         }
     }
@@ -69,7 +69,7 @@ int buyandsellstockitertive(int n, vector<int> vec, vector<vector<vector<int>>> 
     {
         for (int j = 0; j <= 1; j++)
         {
-            for(int cap=1;cap<=2;cap++){
+            for(int cap=1;cap<=k;cap++){
 
             
             long profit = 0;
@@ -88,20 +88,20 @@ int buyandsellstockitertive(int n, vector<int> vec, vector<vector<vector<int>>> 
             }
         }
     }
-    return dp[0][1][2];
+    return dp[0][1][k];
 }
 
 // space optimizatoin
-int buyandsellstockspaceopti(int n, vector<int> vec)
+int buyandsellstockspaceopti(int n,int k, vector<int> vec)
 {
 
-    vector<vector<int>>after(2,vector<int>(3,0)),curr(2,vector<int>(3,0));
+    vector<vector<int>>after(2,vector<int>(k+1,0)),curr(2,vector<int>(k+1,0));
     // it 2*3 matrix jus used 2d matrix here 
    for (int i = n - 1; i >= 0; i--)
     {
         for (int j = 0; j <= 1; j++)
         {
-            for(int cap=1;cap<=2;cap++){
+            for(int cap=1;cap<=k;cap++){
 
             
             long profit = 0;
@@ -121,17 +121,18 @@ int buyandsellstockspaceopti(int n, vector<int> vec)
         }
         after=curr;
     }
-    return after[1][2];
+    return after[1][k];
 }
 int main()
 {
     vector<int> prices = {7, 1, 5, 3, 6, 4,9};
     int n = prices.size();
-    vector<vector<vector<int>>> dp(n, vector<vector<int>>(2, vector<int>(3,-1)));      // 2 because we can buy or not is taken as two steps
-    vector<vector<vector<int>>> dpit(n + 1, vector<vector<int>>(2,vector<int>(3,0))); // 2 because we can buy or not is taken as two steps
-    cout << buyandsellstock(0, 1,2, prices) << endl;
-    cout << buyandsellstockmemo(0, 1, 2, prices, dp) << endl;
-    cout << buyandsellstockitertive(n, prices, dpit) << endl;
-    cout << buyandsellstockspaceopti(n, prices) << endl;
+    int k=3;
+    vector<vector<vector<int>>> dp(n, vector<vector<int>>(2, vector<int>(k+1,-1)));      // 2 because we can buy or not is taken as two steps
+    vector<vector<vector<int>>> dpit(n + 1, vector<vector<int>>(2,vector<int>(k+1,0))); // 2 because we can buy or not is taken as two steps
+    cout << buyandsellstock(0, 1,k, prices) << endl;
+    cout << buyandsellstockmemo(0, 1, k, prices, dp) << endl;
+    cout << buyandsellstockitertive(n,k, prices, dpit) << endl;
+    cout << buyandsellstockspaceopti(n,k, prices) << endl;
     return 0;
 }
