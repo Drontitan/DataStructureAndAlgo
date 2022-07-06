@@ -22,7 +22,7 @@ int main(){
     int n=6;
     vector<int>newvec1,newvec2;
     for(int i=0;i<n;i++){
-        if(i!=0)newvec1.push_back(vec[i]);
+        if(i!=0)newvec1.push_back(vec[i]);// last house is adjacent of the 1st house 
     }
     for(int i=0;i<n;i++){
         if(i!=n-1)newvec2.push_back(vec[i]);

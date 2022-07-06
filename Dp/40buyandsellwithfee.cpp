@@ -11,7 +11,7 @@ typedef long long ll;
 
 int buyandsellstock(int i, int buy,int fee, vector<int> &vec)
 {
-
+   
     if (i >= vec.size())
         return 0;
 
