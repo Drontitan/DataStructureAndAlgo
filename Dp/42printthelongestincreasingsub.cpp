@@ -14,6 +14,9 @@ typedef long long ll;
 // for 1    1 1 2 1 1 1
 // for 16   1 1 2 1 2+1=3 1 
 // like we willl be updating the element by checking all the previous once
+
+// dp array where all the element are intially 1 
+//  hash table which containing the indexs 
 int main(){
     vector<int> vec = {10, 2, 3, 6, 5, 7, 9, 1};
     int n = vec.size();
@@ -37,7 +40,7 @@ int main(){
     for(int i=0;i<n;i++){
          hash[i]=i;
         for(int prev =0 ;prev<i;prev++){
-            if(vec[i]>vec[prev] && 1+dp[prev]){
+            if(vec[i]>vec[prev] && 1+dp[prev]>dp[i]){
                 dp[i]=1+dp[prev];
                 hash[i]=prev;
             }
