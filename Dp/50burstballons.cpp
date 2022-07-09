@@ -64,6 +64,7 @@ int burstballoniterative(int n, vector<int> vec, vector<vector<int>> &dp)
     {
         for (int j = 1; j <= n; j++)
         {
+            if(i>j)continue;
             int maxa = INT_MIN;
             for (int ind = i; ind <= j; ind++)
             {
