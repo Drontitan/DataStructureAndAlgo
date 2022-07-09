@@ -48,12 +48,11 @@ int tabulationnoofjumpspace(int n,vector<int>vec){
 
 }
 int main(){
-    int n;
-    cin>>n;
-    vector<int>dp(n+1,-1);
     vector<int>vec={7,4,4,2,6,6,3,4};
     // cout<<tabulationnoofjumps(n,vec,dp);
-    cout<<noofjumps(n,vec,dp)<<endl;;
+    int n=vec.size();
+    vector<int>dp(n+1,-1);
+    cout<<noofjumps(n-1,vec,dp)<<endl;;
     cout<<tabulationnoofjumpspace(n-1,vec);
     return 0;
 }
