@@ -3,6 +3,10 @@ using namespace std;
 
 typedef long long ll;
 
+
+// infinite supply of of coins count toal number of ways we can achieve the target 
+
+//TC -exponential 
 // recursion
 int coutnnumberofcoins(int i, vector<int> &vec, int target)
 {

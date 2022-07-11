@@ -3,6 +3,8 @@ using namespace std;
 
 typedef long long ll;
 
+
+
 // here the two string cobime to make the one string 
 //  ex- "brute"  "groot"
 // "brutegroot" :- this can be the string but we have to take the shortest common supersquence
@@ -27,11 +29,11 @@ void longestcommonsubiterative(string str1, string str2, int n, int m, vector<ve
    int len = dp[n][m];
    string ans ="";
 
-   int index=len-1;
+
    int i =n,j=m;
    while(i>0 && j>0){
     if(str1[i-1]==str2[j-1]){
-        ans+=str1[i-1];index--;
+        ans+=str1[i-1];
        i-- , j--;
     }
     else if(dp[i-1][j]>dp[i][j-1]){

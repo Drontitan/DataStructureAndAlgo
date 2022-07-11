@@ -3,7 +3,13 @@ using namespace std;
 
 typedef long long ll;
 
+// you have given n you have to cut the rod and you are also the given the value of each lenth of the rod 
+// array is given where length of each length is given 
+// you have to cut he rod in suchway that it price should be maximize
+/// any rod can be taken any number of time 
+
 // recursion
+// exponential
 int rodcutting(vector<int>value,int i,int target){
     if(i==0){
        return target*value[0];
@@ -19,6 +25,7 @@ int rodcutting(vector<int>value,int i,int target){
 }
 
 // memoization
+// TC- O(N*N) SC- O(N*N)+O(N)
 int rodcuttingmemo(vector<int>value,int i,int target,vector<vector<int>>&dp){
   if(i==0){
        return target*value[0];

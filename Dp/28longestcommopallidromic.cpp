@@ -2,6 +2,9 @@
 using namespace std;
 
 typedef long long ll;
+
+// 
+
 //  we taken the ind1 which is the index of the str1 it will be tracing it from the last ans if
 // it is equal to the ind2 which is tracing the str2 then we got match increase the 1
 

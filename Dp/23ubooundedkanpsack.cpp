@@ -3,6 +3,9 @@ using namespace std;
 
 typedef long long ll;
 
+// infinite supply of the items but the capaity should not be overflowed okey 
+
+
 // recursion
 int unboundedknap(vector<int>weight,vector<int>value,int i,int target){
     if(i==0){

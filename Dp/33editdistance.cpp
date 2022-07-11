@@ -7,8 +7,11 @@ typedef long long ll;
 // 1 insertion
 // 2 deletion
 // 3 replace
+// mini operation to convert the str 1 to str 2
+
 
 //recursion
+//TC-  (3^N *3^M)  
 int stringmatching(int i, int j ,string str1 ,string str2 ){
     if(j<0)return i+1;
     if(i<0)return j+1;

@@ -2,10 +2,13 @@
 using namespace std;
 
 typedef long long ll;
+// i have to find the longest commin substring 
+
+
 //  we taken the ind1 which is the index of the str1 it will be tracing it from the last ans if
 // it is equal to the ind2 which is tracing the str2 then we got match increase the 1
 
-// if not match we have two possiblity wither we can decrease the ind1 or ind2 so we have took the
+// if not match we have two possiblity either we can decrease the ind1 or ind2 so we have took the
 // max of  both the calls
 
 // dp on strings

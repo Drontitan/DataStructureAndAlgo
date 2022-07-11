@@ -3,6 +3,12 @@ using namespace std;
 
 typedef long long ll;
 
+// a thief have to stole the item of weight w and he have the bag of capacity C he can put up 
+// capacity items in his bag the item have certain value he want to maximise the stolen value 
+// how he can maximise it 
+
+
+// TC = O(2^n) SC- O(N)
 int recursion(vector<int>weight,vector<int>vec,int i ,int capacity){
     if(i==0){
         if(weight[0]<=capacity)return vec[0];
@@ -17,7 +23,7 @@ int recursion(vector<int>weight,vector<int>vec,int i ,int capacity){
 }
 
 // memoization
-
+// TC = O(N*W) SC- O(N*W)+O(N)
 int recursionmemo(vector<int>&weight,vector<int>vec,int i ,int capacity,vector<vector<int>>&dp){
       if(i==0){
         if(weight[0]<=capacity)return vec[0];
@@ -36,11 +42,11 @@ int recursionmemo(vector<int>&weight,vector<int>vec,int i ,int capacity,vector<v
 
 int recursioniterative(vector<int>&weight,vector<int>vec,int n,int capacity,vector<vector<int>>&dp){
 
-      for(int wei =weight[0]; wei <=capacity; wei++)dp[0][wei]==vec[0];
+      for(int wei =weight[0]; wei <=capacity; wei++)dp[0][wei]=vec[0];
       for(int i= 1 ;i <n;i++){
           for(int w=0; w<=capacity;w++){
                 int notpick =0+dp[i-1][w];
-         int take=INT_MIN;
+         int take=-1e9;
            if(weight[i]<=w){
         take= vec[i]+dp[i-1][w-weight[i]];
         } 
@@ -70,10 +76,10 @@ int recursioniterativespace(vector<int>&weight,vector<int>vec,int n,int capacity
 }
 
 int main(){
-    vector<int>weight={2,6,4,5};
-    vector<int>value={30,50,10,70};
+    vector<int>weight={2,6,4,5,1};
+    vector<int>value={30,50,10,70,40};
     int n=value.size();
-    int capacity=5;
+    int capacity=9;
     vector<vector<int>>dp(n,vector<int>(capacity+1,-1));
     vector<vector<int>>dpit(n,vector<int>(capacity+1,0));
     cout<<recursion(weight,value,n-1,capacity)<<endl;

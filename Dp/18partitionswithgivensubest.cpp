@@ -4,6 +4,9 @@ using namespace std;
 typedef long long ll;
 
 // recusrion 
+// given array we have to partition the array in to two subsets s1 and s2 and we have given the  
+// D=  s1-s2 we have to calculatte the numbre fo ways this can be possibel
+
 int subsetsum(vector<int>vec,int i,int sum){
 
    if(i==0){

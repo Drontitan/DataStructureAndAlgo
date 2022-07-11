@@ -11,6 +11,7 @@ typedef long long ll;
 //  ex: - abc*fg    abcdefg   *->can take no char or e or de or cde then it will be true further
 
 // recursion
+//TC- exponential
 int wildcardmatching(int i, int j, string s1, string s2)
 {
     if (i < 0 && j < 0)
@@ -32,13 +33,14 @@ int wildcardmatching(int i, int j, string s1, string s2)
     }
     if (s1[i] == '*')
     {
-        return wildcardmatching(i - 1, j, s1, s2)    // here we are not takinf anytin for *
+        return wildcardmatching(i - 1, j, s1, s2)    // here we are not taking anything for *
                | wildcardmatching(i, j - 1, s1, s2); // here we are taking 1 2 or 3 or many cases for *
     }
     return false;
 }
 
 // memoization
+//TC- O( N*M ) 
 int wildcardmatchingmemo(int i, int j, string s1, string s2, vector<vector<int>> &dp)
 {
     if (i < 0 && j < 0)

@@ -2,6 +2,9 @@
 using namespace std;
 
 typedef long long ll;
+
+//print the longest subsequence 
+
 //  we taken the ind1 which is the index of the str1 it will be tracing it from the last ans if
 // it is equal to the ind2 which is tracing the str2 then we got match increase the 1
 
@@ -45,11 +48,11 @@ void longestcommonsubiterative(string str1, string str2, int n, int m, vector<ve
    int index=len-1;
    int i =n,j=m;
    while(i>0 && j>0){
-    if(str1[i-1]==str2[j-1]){
+    if(str1[i-1]==str2[j-1]){ // if they match then go diagonally 
         ans[index]=str1[i-1];index--;
        i-- , j--;
     }
-    else if(dp[i-1][j]>dp[i][j-1]) i--;
+    else if(dp[i-1][j]>dp[i][j-1]) i--; // if not then go to the maximum of the both 
     else j--;
 
    }

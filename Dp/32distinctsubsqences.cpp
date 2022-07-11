@@ -5,7 +5,9 @@ typedef long long ll;
 
 // how many times the string2 appears int the string 1 
 
+
 //recursion
+//TC- Exponenetial Sc- O(N+M )
 int stringmatching(int i, int j ,string str1 ,string str2 ){
     if(j<0)return 1;
     if(i<0)return 0;
@@ -17,7 +19,7 @@ int stringmatching(int i, int j ,string str1 ,string str2 ){
 }
 
 // memoization
-
+//TC-O(N*M) - SC- O(N*M) + O(N)
 int stringmatchingmemo(int i, int j ,string str1 ,string str2 ,vector<vector<int>>&dp){
     if(j<0)return 1;
     if(i<0)return 0;

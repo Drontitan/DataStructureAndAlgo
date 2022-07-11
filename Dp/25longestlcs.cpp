@@ -2,6 +2,9 @@
 using namespace std;
 
 typedef long long ll;
+
+// find the longest subsequence in the two given string str1 and str2 
+
 //  we taken the ind1 which is the index of the str1 it will be tracing it from the last ans if
 // it is equal to the ind2 which is tracing the str2 then we got match increase the 1
 
@@ -10,7 +13,9 @@ typedef long long ll;
 
 // dp on strings
 // recursion
-int longestcommonsub(string str1, string str2, int ind1, int ind2)
+
+//TC- O(2^N)*O(2^M )
+ int longestcommonsub(string str1, string str2, int ind1, int ind2)
 {
     if (ind1 < 0 || ind2 < 0)
         return 0;
@@ -23,6 +28,8 @@ int longestcommonsub(string str1, string str2, int ind1, int ind2)
 }
 
 // memoization
+
+//Tc- O(N*M)  
 int longestcommonsubmemo(string str1, string str2, int ind1, int ind2, vector<vector<int>> &dp)
 {
     if (ind1 < 0 || ind2 < 0)
@@ -81,8 +88,8 @@ int longestcommonsubspaceopti(string str1, string str2, int n, int m)
 
 int main()
 {
-    string str1 = "acd";
-    string str2 = "ced";
+    string str1 = "acdsff";
+    string str2 = "cedfsdf";
     int n = str1.size();
     int m = str2.size();
     vector<vector<int>> dp(n, vector<int>(m + 1, -1));
