@@ -30,8 +30,7 @@ int main(){
         }
         else{
             int ind =lower_bound(temp.begin(),temp.end(),vec[i])-temp.begin();
-            temp[ind]=vec[ind];
-
+            temp[ind]=vec[i];
         }
      }
      cout<<length<<endl;

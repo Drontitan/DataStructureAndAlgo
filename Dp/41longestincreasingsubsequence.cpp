@@ -7,6 +7,7 @@ typedef long long ll;
 // ans - 2,3,5,7,9,
 
 // recursion
+//TC- O(2^N) SC: - O(N)
 int longestincreasing(int i, int prev, vector<int> &vec)
 {
 
@@ -23,7 +24,8 @@ int longestincreasing(int i, int prev, vector<int> &vec)
 }
 
 // memomization
-int longestincreasingmemo(int i, int prev, vector<int> &vec, vector<vector<int>> &dp)
+//  Tc: -O(N*N)  SC-O(N*N) + O( N)
+ int longestincreasingmemo(int i, int prev, vector<int> &vec, vector<vector<int>> &dp)
 {
 
     if (i == vec.size())

@@ -17,6 +17,7 @@ typedef long long ll;
 
 // dp array where all the element are intially 1 
 //  hash table which containing the indexs 
+//O(N*N)    SC-O(N) 
 int main(){
     vector<int> vec = {10, 2, 3, 6, 5, 7, 9, 1};
     int n = vec.size();
@@ -36,6 +37,8 @@ int main(){
 
     //  how to print the lis 
     vector<int>dp(n,1),hash(n);
+    // dp is for mainting the that how many element till that ele is there 
+    // in hash we were storing the previous element index from which we are coming 
     int lastindex=0;
     for(int i=0;i<n;i++){
          hash[i]=i;
