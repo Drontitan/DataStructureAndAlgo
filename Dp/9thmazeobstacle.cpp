@@ -3,6 +3,8 @@ using namespace std;
 
 typedef long long ll;
 
+// obstacle in the grid so we skip tha obstacle and reach the top of the matrix
+
 // recursion solution
 
 int mazeobstacle(vector<vector<int>>&vec,int i,int j){

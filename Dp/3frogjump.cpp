@@ -3,7 +3,13 @@ using namespace std;
 
 typedef long long ll;
 
+// here we are starting at the index 1 and as we jump from the ith to i+1 th we loose energy 
+// the energy loos is e[i+1]-e[i]    
+// we can jump one step or two step  
+// return minimum energy require to go the nth step
 
+
+// TC - O(N)  - Sc O(n)+O(N) 
 int noofjumps(int n,vector<int>vec,vector<int>&dp){
     if(n==0)return 0;
     if(dp[n]!=-1)return dp[n];

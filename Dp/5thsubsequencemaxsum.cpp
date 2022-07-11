@@ -3,7 +3,13 @@ using namespace std;
 
 typedef long long ll;
 
+//  pickup the subsquence which will give u the maximum sum and no two element should be adjacent
+// return the maximum sum 
+
+
+
 // recursion
+// TC - O(2^n)  Sc- O(N)+O(N)
 int maxsubsum(vector<int>vec,int n){
     if(n==0)return vec[n];
     if(n<0)return 0;
@@ -15,6 +21,7 @@ int maxsubsum(vector<int>vec,int n){
 }
 
 //memoization code
+// TC - O{n} - Sc -"-"
 int maxsubsummemo(vector<int>vec,int n,vector<int>dp){
     if(n==0)return vec[n];
     if(n<0)return 0;

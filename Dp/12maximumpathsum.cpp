@@ -3,9 +3,12 @@ using namespace std;
 
 typedef long long ll;
 
-// from amy cell from n*m grid to the last row to any cell 
+// from amy cell int the 1st row  from n*m grid to the last row to any cell 
+// varible starting point to variable ending point
+
 
 // recurion solution
+//Tc - O(3*n) SC -O(N)
 int maximumpathsum(vector<vector<int>>&vec,int i,int j){
      if(j<0||j>=vec[0].size())return -1e8;
      if(i==0)return vec[0][j];
@@ -16,6 +19,8 @@ int maximumpathsum(vector<vector<int>>&vec,int i,int j){
      return max(up,max(rightdiagonal,leftdiagonal));
 }
 // memoization solution 
+// TC- O(N*M)   Sc- O(N*M)+O(N)
+
 
 int maximumpathsummemo(vector<vector<int>>&vec,int i,int j,vector<vector<int>>&dp){
      if(j<0||j>=vec[0].size())return -1e8;

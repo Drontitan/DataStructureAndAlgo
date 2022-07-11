@@ -18,7 +18,7 @@ in triangle
 
 
 we can move directly down or digonally botoom manner  only 
-
+// fixed starting point to the variable ending point 
 */
 // recursion
 int countminpath(vector<vector<int>>&vec,int i,int j,int n){

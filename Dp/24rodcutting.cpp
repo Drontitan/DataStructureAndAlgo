@@ -75,6 +75,7 @@ int rodcuttingspaceopti(vector<int>value,int n,int target){
     return prev[target];
 }
 
+
 int main(){
 //                    1,2,3,4,5
     vector<int>value={2,5,7,8,10};

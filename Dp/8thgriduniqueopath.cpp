@@ -4,7 +4,15 @@ using namespace std;
 typedef long long ll;
 
 
+// you are standing at 0,0 and the matrix is of size m*n you have reach m-1,n-1
+// you can either go down or right find the total number of the unique ways 
+
+
+// we have gone in reverse order and taken up and left 
 // recursion solution
+
+// exponential  TC- O(2^n*m)  sc-pathlenth 
+
 int twodpathscount(int i,int j){
     if(i==0 && j==0)return 1;
     if(i<0|| j<0)return 0;
@@ -14,6 +22,8 @@ int twodpathscount(int i,int j){
     return up+left;
 }
 
+
+//Tc - O(N*M) // SC- O(n-1)+O(m-1)+O(N*M)
 // memoization solution
 int twodpathscountmemo(int i,int j,vector<vector<int>>&dp){
     if(i==0 && j==0)return 1;
@@ -72,9 +82,10 @@ int main(){
     
     int n=3;
     vector<vector<int>>vec(n,vector<int>(n,-1));
-    // cout<<twodpathscount(n-1,n-1);
-    // cout<<twodpathscountmemo(n-1,n-1,vec);
-    cout<<twodpathscountiterative(n,n,vec)<<endl;;
+    vector<vector<int>>vecit(n,vector<int>(n,0));
+    // cout<<twodpathscount(n-1,n-1)<<endl;
+    // cout<<twodpathscountmemo(n-1,n-1,vec)<<endl;
+    cout<<twodpathscountiterative(n,n,vecit)<<endl;
     cout<<twodpathscountiterativespace(n,n);
     return 0;
 }

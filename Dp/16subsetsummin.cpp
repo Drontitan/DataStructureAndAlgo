@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// divide the array in two subsets such that absolute difference of the subsets  sum is minimum 
+
 typedef long long ll;
-// nice question it is the kind of you should solve this questin previsiously 
+// nice question it is the kind of you should solve this question previsiously 
 int main()
 {
     vector<int> vec = {1, 2, 3, 4};

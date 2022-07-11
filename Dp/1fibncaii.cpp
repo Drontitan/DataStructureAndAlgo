@@ -24,6 +24,10 @@ typedef long long ll;
 
 // }
 // ** reducin the space complexity  O(N)+O(N)
+
+
+
+
 int f(int n, vector<int>&dp){
     int prev2=0;
     int prev=1;

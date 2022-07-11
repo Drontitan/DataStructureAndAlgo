@@ -4,8 +4,11 @@ using namespace std;
 typedef long long ll;
 
 
+// you are given the nth stair you are starting from the 0th stair and you can climb 1 or 2 stairs
+// return number of ways to reach the nth stair 
+
 int jump(int n){
-    
+
    if(n==0)return 1;
    if(n==1)return 1;  // its for the index-2 
    int left= jump(n-1);

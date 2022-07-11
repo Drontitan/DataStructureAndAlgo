@@ -3,7 +3,13 @@ using namespace std;
 
 typedef long long ll;
 
-// recursoin solution 
+//here ninja can have to perform one among the 3 activities on the  day and he can not perform the 
+// same activity on the consecutive day 
+
+// we have givene the n*3 matrix we have to maximise the merits points on each day ninja have gain doign the
+// activity 
+
+// recursion solution 
 int solve(int day,int last, vector<vector<int>>&points){
 
     if(day==0){
@@ -26,6 +32,7 @@ int solve(int day,int last, vector<vector<int>>&points){
 }
 
 // memoization solution
+// TC - O(N*4)*3  Sc- O (N)+O(N*4)
 int solvememo(int day,int last, vector<vector<int>>&points,vector<vector<int>>&dp){
 
     if(day==0){
@@ -52,8 +59,8 @@ int solvememo(int day,int last, vector<vector<int>>&points,vector<vector<int>>&d
 int solveiterative(int n, vector<vector<int>>&points,vector<vector<int>>&dp){
    
    dp[0][0]=max(points[0][1],points[0][2]);
-   dp[0][1]=max(points[0][1],points[0][2]);
-   dp[0][2]=max(points[0][1],points[0][1]);
+   dp[0][1]=max(points[0][0],points[0][2]);
+   dp[0][2]=max(points[0][0],points[0][1]);
    dp[0][3]=max(points[0][1],max(points[0][1],points[0][2]));
    
     for(int day=1;day<n;day++){

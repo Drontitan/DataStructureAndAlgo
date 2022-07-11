@@ -3,6 +3,9 @@ using namespace std;
 
 typedef long long ll;
 
+// previous question just you can now jump from 1 or 2 or 3 or kth step form the current step
+// return minimum energy require
+
 int kthjump(vector<int>vec,int n,int k){
     if(n==0)return 0;
     int minsteps=INT_MAX;
@@ -16,6 +19,7 @@ int kthjump(vector<int>vec,int n,int k){
     return minsteps;
 }
 //  memoization code 
+// TC - O{n * K}  SC -O(N)+O(N)
 int kthjumpmemo(vector<int>vec,int n,int k,vector<int>dp){
     // dp[0]=0;                                                                                              
     int minsteps=INT_MAX;

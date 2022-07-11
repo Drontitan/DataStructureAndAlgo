@@ -3,6 +3,10 @@ using namespace std;
 
 typedef long long ll;
 
+// the roober want to steal the house and house are arranged in the circular order 
+// robber can steal any house but the house should be adjacent 
+
+
 int maxsubssumspace(vector<int>vec){
     int n=vec.size();
     int prev=vec[0];
@@ -26,7 +30,7 @@ int main(){
     }
     for(int i=0;i<n;i++){
         if(i!=n-1)newvec2.push_back(vec[i]);
-    }
+    }                                                                        
     cout<<max(maxsubssumspace(newvec1),maxsubssumspace(newvec2));
     return 0;
 }

@@ -3,7 +3,10 @@ using namespace std;
 
 typedef long long ll;
 
+// if there exit the subset that give the sum equal to the target 
+
 // recusrion 
+// O( 2^n) -SC O(N) 
 bool subsetsum(vector<int>vec,int i,int target){
     
    if(target==0)return true;
@@ -18,6 +21,7 @@ bool subsetsum(vector<int>vec,int i,int target){
 
 
 // memoization 
+// TC - O(N*target)  SC- (N*target) 
 bool subsetsummemo(vector<int>vec,int i,int target,vector<vector<int>>&dp){
     
    if(target==0)return true;
