@@ -13,12 +13,13 @@ vector<int>preordertraversal(Treenode * tree){ // as for pre order we go from ro
        if(root==NULL)return preorder;
 
        stack<Treenode*>st;
+       st.push(root);
        while(!st.empty()){
         root=st.top();
         st.pop();
         preorder.push_back(root);
-        if(root->right!=NULL)st.push_back(root->right);
-        if(root->left!=NULL)st.push_back(root->left);
+        if(root->right!=NULL)st.push(root->right);
+        if(root->left!=NULL)st.push(root->left);
 
        }
        return preorder;
@@ -110,6 +111,45 @@ vector<int>postordertraversal(Treenode * tree){ // as here in inorder there is d
          }
        }
        return postorder;
+}
+
+
+// ***************All in one ******************// 
+vector<int>preinpost(Treenode* root){
+    // here all 3 traversal 
+  stack<pair<Treenode *,int>>st;
+  st.push(root,1);
+  vector<int>pre,post,in; //  ds for post pre and inorder 
+  if(root==NULL)return ;
+  while(!st.empty()){
+    auto it = st.top();
+    st.pop();
+    if(it.second==1){    //  if num is 1 then preorder will store and go to left 
+      pre.push_back(it.first->val);
+      it.second++;
+      st.push(it)
+
+      if(it.first->left!=NULL){
+        st.push({it.first->left,1});
+      }
+    }
+
+    else if(it.second==2){   // if num is 2 inorder will increase the num and will got to right
+     in.push_back(it.first->val);
+     it.second++;
+     st.push(it);
+       if(it.first->right!=NULL){
+        st.push({it.right->left,1});
+      }
+    }
+
+    else {  //  for the post order traversal 
+        post.push_back(it.first->val);
+        st.pop();
+    }
+
+  }
+
 }
 
 
