@@ -3,6 +3,11 @@ using namespace std;
 
 typedef long long ll;
 
+struct Treenode {
+    int val;
+    struct Treenode *left;
+    struct Treenode *right;
+};
 
 // height of left -  right <=1 so it is an balanced binary tree 
 

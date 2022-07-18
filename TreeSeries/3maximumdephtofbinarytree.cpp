@@ -10,6 +10,11 @@ typedef long long ll;
 //  many cases we prefer recursion 
 
 // Recursion
+struct Treenode {
+    int val;
+    struct Treenode *left;
+    struct Treenode *right;
+};
 
 // 1st we will go to the left then right 
 int maxdepth(Treenode *root){
@@ -26,7 +31,7 @@ int maxdepth(Treenode *root){
     queue<Treenode*>q;
     int count=0;
     q.push(root);
-    while(!q.empty){
+    while(!q.empty()){
        int size =q.size();
        for(int i=0 ;i <size;i++){
         Treenode *node =q.front();

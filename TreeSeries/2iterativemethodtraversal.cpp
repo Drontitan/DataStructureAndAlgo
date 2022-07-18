@@ -2,6 +2,11 @@
 using namespace std;
 
 typedef long long ll;
+struct Treenode {
+    int val;
+    struct Treenode *left;
+    struct Treenode *right;
+};
 
 
 //TC-O(N)  SC-O(N) -O(Height)
@@ -44,7 +49,7 @@ vector<int>inordertraversal(Treenode * tree){ // as here in inorder there is dif
             node = node->left;
         }
         else{
-            if(st.empty==NULL)break;
+            if(st.empty()==NULL)break;
             node =st.top();
             st.pop();
             inorder.push_back(node->val);
@@ -57,7 +62,7 @@ vector<int>inordertraversal(Treenode * tree){ // as here in inorder there is dif
 
 //TC- O(N) SC-O(2*N+N)
 // *****************using the two stacks ****************// 
-vector<int>postordertraversal(Treenode * tree){ // as here in inorder there is diff trick 
+vector<int>postordertraversal(Treenode * root){ // as here in inorder there is diff trick 
     //EX -1 2 3 4 5 6 7 
     // here we use the two stack st1 and st2 
     // take the 1st element and put it in to the stack then remove it put it int ot st2 and in frist put its 
@@ -87,7 +92,7 @@ vector<int>postordertraversal(Treenode * tree){ // as here in inorder there is d
 
 //TC- O(N) SC-O(2*N+N)
 // *****************using the One  stacks ****************// 
-vector<int>postordertraversal(Treenode * tree){ // as here in inorder there is diff trick 
+vector<int>postordertraversal(Treenode * root){ // as here in inorder there is diff trick 
     //EX -1 2 3 4 5 6 7 
     // here we use the two stack st1 and st2 
     // take the 1st element and put it in to the stack then remove it put it int ot st2 and in frist put its 
@@ -99,14 +104,14 @@ vector<int>postordertraversal(Treenode * tree){ // as here in inorder there is d
        stack<Treenode*>st1,st2;
        st1.push(root);
 
-       while(!st1.empty){
+       while(!st1.empty()){
         root = st1.top();
         st1.pop();
         st2.push(root);
          if(root->left!=NULL)st1.push(root->left);
          if(root->right!=NULL)st1.push(root->right);
          while(!st2.empty()){
-            postorder.push_back(st2.top->val);
+            postorder.push_back(st2.top()->val);
             st2.pop();
          }
        }
