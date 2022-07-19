@@ -22,7 +22,7 @@ struct Treenode {
 
 
 Treenode *lowestcommonlca(Treenode *root, Treenode *p ,Treenode *q){
-    if(root==NULL || p==NULL | q==NULL)return root;
+    if(root==NULL || root==p || root==q)return root;
     
     Treenode *left =lowestcommonlca(root->left,p,q);
     Treenode *right= lowestcommonlca(root->right,p,q);
