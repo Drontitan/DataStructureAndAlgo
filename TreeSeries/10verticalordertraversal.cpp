@@ -9,7 +9,7 @@ struct Treenode {
 };
 
 // we have to traverse vertically 
-// EX:-               1
+// EX:-                1
 //                   /    \
 //                 2       3
 //                /  \     / \
@@ -19,7 +19,7 @@ struct Treenode {
 //                   \                               
 //                    6
 
-// so the traversal wii,be   4 -  2 5 -  1 9 10 6 -  3 -  10 
+// so the traversal will,be   4 -  2 5 -  1 9 10 6 -  3 -  10 
 
 // we will be taking level and vertically and horizontally
 // vertical levell start fromm mid as root as 0 then towrds left -1 each time we traverse left and +1 

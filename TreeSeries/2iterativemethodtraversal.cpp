@@ -10,7 +10,7 @@ struct Treenode {
 
 
 //TC-O(N)  SC-O(N) -O(Height)
-vector<int>preordertraversal(Treenode * tree){ // as for pre order we go from root left right 
+vector<int>preordertraversal(Treenode * root){ // as for pre order we go from root left right 
 
            //  so first push root then right then left bcz we have to iterate left next and this an stack
            // so last will be call 1st 
@@ -22,17 +22,17 @@ vector<int>preordertraversal(Treenode * tree){ // as for pre order we go from ro
        while(!st.empty()){
         root=st.top();
         st.pop();
-        preorder.push_back(root);
+        preorder.push_back(root->val);
         if(root->right!=NULL)st.push(root->right);
         if(root->left!=NULL)st.push(root->left);
 
        }
        return preorder;
-}
+}3
 
-
+      
 //TC- O(N) SC-O(N)
-vector<int>inordertraversal(Treenode * tree){ // as here in inorder there is diff trick 
+vector<int>inordertraversal(Treenode * root){ // as here in inorder there is diff trick 
     //EX -1 2 3 4 5 6 7 
     // inorder  here we will go till left and pushing the value that we are getting while moving to the left
     // then we will insert the last left in to to our datastrcture then will check for right 
@@ -87,6 +87,7 @@ vector<int>postordertraversal(Treenode * root){ // as here in inorder there is d
        }
        return postorder;
 }
+
 
 
 

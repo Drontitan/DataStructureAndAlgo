@@ -2,6 +2,10 @@
     "files.associations": {
         "*html": "html",
         "random": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     }
 }

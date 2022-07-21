@@ -9,7 +9,7 @@ struct Treenode {
     int val;
 };
 // maximum nnumber of nodes in the level 
-// here will be assining the each node some number like 1 2 3 4 but it will pverflow if we assign 
+// here will be assining the each node some number like 1 2 3 4 but it will overflow if we assign 
 // each node new number so on each level we will be assigning the number from start 
 // 0 1 2 3 4 5 like this 
 

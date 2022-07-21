@@ -21,8 +21,8 @@ struct Treenode {
 
 int countnode(Treenode *root){
 
-    int lh = findleftheight(root->left);
-    int rh= findrightheight(root->right);
+    int lh = findleftheight(root);
+    int rh= findrightheight(root);
 
     if(lh==rh)return (1<<lh)-1;
 
