@@ -145,7 +145,7 @@ vector<int>preinpost(Treenode* root){
      it.second++;
      st.push(it);
        if(it.first->right!=NULL){
-        st.push({it.right->left,1});
+        st.push({it.first->right,1});
       }
     }
 
