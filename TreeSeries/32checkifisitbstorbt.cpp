@@ -9,7 +9,7 @@ struct Treenode {
    struct Treenode *left;
    struct Treenode *right;
 };
-
+//TC-O(N) - SC-O(1)+stackspaceauxilary
 
 bool isvalidbst(Treenode *root){   
       return isvalid(root,INT_MAX ,INT_MIN);
