@@ -32,16 +32,17 @@ bool checkpossibility(string s, string t)
         return true;
     return false;
 }
-
+bool comp(string &s ,string &t){
+    return   s.size() >t.size();
+}
 
 // TC :O(N*N)*length of the string 
 // Sc- O(n);
 int main()
 {
     vector<string> vec = {"a", "b", "ba", "bca", "bda", "bdca"};
-    sort(vec.begin(), vec.end());
+    sort(vec.begin(), vec.end(),comp);
     int n = vec.size();
-    sort(vec.begin(), vec.end());
     int maxi = 1;
     vector<int> dp(n, 1);
     for (int i = 0; i < n; i++)
@@ -60,7 +61,7 @@ int main()
         }
     }
 
-    cout << maxi;
 
+    cout << maxi;
     return 0;
 }

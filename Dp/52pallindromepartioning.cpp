@@ -70,7 +70,7 @@ int partitionpalliniterative(int n,string &s,vector<int>&dp){
    }
    return dp[0]-1;
 }
-
+  
 int main(){
     string str="abcd";
     int n = str.size();
@@ -92,7 +92,5 @@ int main(){
     dp[i]=mini;
    }
     cout<< dp[0]-1;
-    return 0;
-
-    
+    return 0;   
 }

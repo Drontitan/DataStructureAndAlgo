@@ -13,7 +13,6 @@ int main(){
    // 1 5 6 10 // so total unique ele length will be 8 
     sort(vec.begin(), vec.end());
     int n = vec.size();
-    sort(vec.begin(), vec.end());
    
     vector<int> dp1(n, 1),dp2(n,1);
 

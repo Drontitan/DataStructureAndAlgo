@@ -9,6 +9,7 @@ typedef long long ll;
 
 // this can be solved by the partition dp
 
+// i to k then k+1 to j
 // recursion
 int matrixchain(int i, int j, vector<int> vec)
 {

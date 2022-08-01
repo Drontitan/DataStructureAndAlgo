@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-// you have given n you have to cut the rod and you are also the given the value of each lenth of the rod 
+// you have given n you have to cut the rod and you are also the given the value of each length of the rod 
 // array is given where length of each length is given 
 // you have to cut he rod in suchway that it price should be maximize
 /// any rod can be taken any number of time 

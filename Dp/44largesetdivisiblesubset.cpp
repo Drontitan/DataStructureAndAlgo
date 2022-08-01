@@ -7,7 +7,7 @@ typedef long long ll;
 
 
 // here we will be just using previous code just sorting in the 1 st and making change in the condition
-// 
+//TC- O(N*N) - SC- O(N) 
 int main(){
        vector<int> vec = {10, 2, 3, 6, 5, 7, 9, 1};
     int n = vec.size();
@@ -39,7 +39,5 @@ int main(){
    cout<<endl;
    cout<<maxi;
 
-    
-     
     return 0;
 }

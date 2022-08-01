@@ -89,7 +89,7 @@ int maximumpathsumspace(vector<vector<int>>&vec,int n,int m){
 
 
 int main(){
-    vector<vector<int>>vec={{1,2,10,4},{100,3,2,1,},{1,1,20,2},{1,2,2,1}};
+    vector<vector<int>>vec={{1,7,8,2},{100,3,2,1,},{1,1,20,2},{1,2,2,1}};
     int n= vec.size();
     int m = vec[0].size();
     vector<vector<int>>dp(n,vector<int>(m,-1));

@@ -3,8 +3,8 @@ using namespace std;
 
 typedef long long ll;
 
-// the roober want to steal the house and house are arranged in the circular order 
-// robber can steal any house but the house should be adjacent 
+// the robber want to steal the house and house are arranged in the circular order 
+// robber can steal any house but the house should not be adjacent 
 
 
 int maxsubssumspace(vector<int>vec){

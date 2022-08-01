@@ -10,7 +10,7 @@ typedef long long ll;
 // 0 1,2 3    3 4 7 so the cost will be cost[i-1]+cost[j+1]
 // here we need i and j will be 2 pointer i will be at the start where cut is made and j will be last
 // just above i here will be intially at 1 and j at 4
-// after cuttin each length will have seprat i and j  ex:  i-1 j-2  i-4 j-4
+// after cutting each length will have seprat i and j  ex:  i-1 j-2  i-4 j-4
 
 // recursion
 int costofcutting(int i, int j, vector<int> vec)

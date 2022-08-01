@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-// infinite supply of the items but the capaity should not be overflowed okey 
+// infinite supply of the items but the capacity should not be overflowed okey 
 
 
 // recursion

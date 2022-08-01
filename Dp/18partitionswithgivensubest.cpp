@@ -5,7 +5,7 @@ typedef long long ll;
 
 // recusrion 
 // given array we have to partition the array in to two subsets s1 and s2 and we have given the  
-// D=  s1-s2 we have to calculatte the numbre fo ways this can be possibel
+// D=  s1-s2 we have to calculate the numbre of ways this can be possible
 
 int subsetsum(vector<int>vec,int i,int sum){
 
