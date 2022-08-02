@@ -6,9 +6,9 @@ typedef long long ll;
 // string chain means ex : - a, b  ,ba , bda ,bca , bdca
 
 // here {a ba bda} , {a,ba,bda }, {a,b, ,bda,bca}
-// so here next element will be addition on 1 char to previod element
+// so here next element will be addition on 1 char to previous element
 //  or the previous element will be the 1 deletion of the next guy
-// we have to print he longest length of such strings array
+// we have to print the longest length of such strings array
 
 bool checkpossibility(string s, string t)
 {

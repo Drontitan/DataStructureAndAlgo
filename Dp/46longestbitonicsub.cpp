@@ -30,7 +30,7 @@ int main(){
     }
 
     // for the decreasing part of the array 
-    for (int i = n; i >=0; i--)
+    for (int i = n-1; i >=0; i--)
     {
 
         for (int prev = n-1; prev >=i; prev--)
