@@ -9,15 +9,19 @@ typedef long long ll;
 
 // this can be solved by the partition dp
 
+// always start with the whole problem then break it into the smaller problems  and there will be 
+// two points start and end (i,j) 
+// try all the partition 
+
 // i to k then k+1 to j
 // recursion
 int matrixchain(int i, int j, vector<int> vec)
 {
-    if (i == j)
+    if (i == j) // when it remains as the single array 
         return 0;
     int mini = 1e9;
-    for (int k = i; k < j; k++)
-    {
+    for (int k = i; k < j; k++)// to try all the partition 
+    {                                                        // i to k                 // k+1 to j 
         int steps = vec[i - 1] * vec[k] * vec[j] + matrixchain(i, k, vec) + matrixchain(k + 1, j, vec);
         if (steps < mini)
             mini = steps;
@@ -52,9 +56,6 @@ int matrixchainiterative(int n,vector<int> vec, vector<vector<int>> &dp)
         for (int j = i + 1; j <n; j++)
         {
             int mini = 1e9;
-            for (int k = i; k < j; k++)
-            {
-                int mini = 1e9;
                 for (int k = i; k < j; k++)
                 {
                     int steps = vec[i - 1] * vec[k] * vec[j] + dp[i][k] + dp[k + 1][j];
@@ -62,7 +63,7 @@ int matrixchainiterative(int n,vector<int> vec, vector<vector<int>> &dp)
                         mini = steps;
                 }
                 dp[i][j] = mini;
-            }
+            
         }
     }
 

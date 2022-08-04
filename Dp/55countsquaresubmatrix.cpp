@@ -3,9 +3,9 @@ using namespace std;
 
 typedef long long ll;
 
-// total number of the square int he matrix which are formed by 1
+// total number of the square int the matrix which are formed by 1
 // here you can take all size square like 1 2 3 4 and all like this
-
+//TC- O(N*M)  SC-O(N*M)  
 int main()
 {
     vector<vector<int>> mat = {{1, 1, 0}, {1, 1, 1}, {1, 1, 1}};

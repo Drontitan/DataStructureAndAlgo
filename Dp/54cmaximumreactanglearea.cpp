@@ -34,7 +34,7 @@ int main(){
    {
     for (int j = 0; j < m; j++)
     {
-        if(mat[i][j]==1)height[j]++;
+        if(mat[i][j]==1)height[j]++;//calculating the height of the by traversing over each column 
         else height[j]=0;
     }
     int area=findmaxarea(height);

@@ -9,7 +9,7 @@ typedef long long ll;
 
 //  front partitions : -
 
-//  what we will do that we will traverse from left to right like taking b then a then b as long the string 
+//what we will do that we will traverse from left to right like taking b then a then b as long the string 
 // will say it is pallindrome then mark the pallindrome then move i to where we have stop
 // check next part of the string here from cbc like that
 
@@ -76,7 +76,7 @@ int main(){
     int n = str.size();
     // vector<int>dp(n,-1);
     vector<int>dp(n+1,0);
-    // cout<<partitionpallin(0,n,s)-1<<endl;
+    // cout<<partitionpallin(0,n,s)-1<<endl;// we are subtracting because of the partition at the end
     // cout<<partitionpallinmemo(0,n,s,dp)-1<<endl;
     // cout<<partitionpalliniterative(n,s,dpit)<<endl;
        dp[n]=0;

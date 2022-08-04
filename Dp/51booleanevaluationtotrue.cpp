@@ -77,9 +77,10 @@ ll booleanevaluationmemo(int i, int j, int istrue, string vec, vector<vector<vec
         if (vec[ind] == '&')
         {
             if (istrue)
-                ways = (ways + (lt * rt) % m) % m;
+                ways = (ways + (lt * rt) % m) % m;  // here we have calculated the number of the ways
+                // you can have the true 
             else
-                ways = (ways + (lf * rt) % m + (rf * lt) % m + (rf * lf) % m) % m;
+                ways = (ways + (lf * rt) % m + (rf * lt) % m + (rf * lf) % m) % m;// no false ways 
         }
         else if (vec[ind] == '|')
         {

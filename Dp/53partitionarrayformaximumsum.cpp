@@ -36,6 +36,7 @@ int partitionarray(int i, int k,int n, vector<int>&vec)
 
 
 // memoization
+//TC- O(N)*O(K)  SC- O(N)+O(N )
 int partitionarraymemo(int i, int k, vector<int>&vec,vector<int>&dp)
 {
    int n=vec.size();
