@@ -8,7 +8,7 @@ typedef long long ll;
 
 // you want to find the number of the islands in the matrix 
 
-void dfs(int row, int col , vector<vector<int>>&visi,vector<vector<int>>grid){
+void bfs(int row, int col , vector<vector<int>>&visi,vector<vector<int>>grid){
 
     visi[row][col]=1; 
     queue<pair<int,int>>q;
@@ -51,7 +51,7 @@ int main(){
         for(int j=0; j<m; j++){
             if(!visi[i][j] && grid[i][j]==1){
             count++;
-             dfs(i,j,visi,grid);
+             bfs(i,j,visi,grid);
             }
         }
     }

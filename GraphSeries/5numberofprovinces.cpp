@@ -51,12 +51,4 @@ int main()
     return 0;
 }
 
-// oklets talk about something trash now 
-for(auto ele: mp ){
-    cout<<ele<< " ";
-}
-cout<<endl;
-for(int =0 ;i< n; i++){
-    cout<<vec[i][j]<<" ";
-}
-cout<<"\n";
+
