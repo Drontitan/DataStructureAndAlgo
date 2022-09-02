@@ -65,7 +65,7 @@ int main(){
     int oricolor=grid[row][col];
     //  bfs(row,col,grid,newcolor);
      dfs(row,col,grid,newcolor,delerow,delecol,oricolor);
-    
+     
     for(int i=0 ;i <n ;i++){
         for(int j =0 ;j <m ;j++ ){
             cout<<grid[i][j]<<" ";
