@@ -1,0 +1,8 @@
+here in the image u can see that if we  follow the same mwthod as we have done in the undirected graph
+then we have considered the 3-4-5-7 as the cycle node but it not like that
+
+we have to make one path visited array if the node is visited in that path then it is called as the cycle
+int the path like the  8-9-10 does 
+
+
+
