@@ -3,6 +3,8 @@ using namespace std;
 
 typedef long long ll;
 
+
+// only for the directed acyclic graph
 stack<int>st;
 
 void dfs(vector<int>vec[],int visi[],int node,stack<int>&st){
