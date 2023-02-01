@@ -37,7 +37,7 @@ void adjlist(){
       
     for(int i=0;i<n;i++){
        cout<<i<<":";
-       for(int j=0;j<vec[i].size();j++)cout<<vec[i][j]<<" ";
+      for(auto ele:vec[i])cout<<ele<<" ";
        cout<<endl;
     }
 }

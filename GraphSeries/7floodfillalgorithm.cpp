@@ -3,6 +3,9 @@ using namespace std;
 
 typedef long long ll;
 
+// we have to color the pixel attache to it having the same color expect the pixel which are diagonally 
+
+
 void bfs(int row,int col,vector<vector<int>>&grid,int newcolor){
     
     queue<pair<int,int>>q;
@@ -48,11 +51,11 @@ void dfs(int row,int col,vector<vector<int>>&grid,int newcolor,int delerow[],int
              if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && grid[nrow][ncol]==oricolor &&grid[nrow][ncol]!=newcolor){
                 dfs(nrow,ncol,grid,newcolor,delerow,delecol,oricolor);
         }
-    }
+    } 
 }
 
 int main(){
-    vector<vector<int>>grid={{1,1,1},{2,2,0},{2,2,2}};
+    vector<vector<int>>grid={{1,1,2},{2,2,0},{2,2,2}};
      
      int n=grid.size();
      int m=grid[0].size();
@@ -63,8 +66,8 @@ int main(){
     int delerow[]={-1,0,1,0};
     int delecol[]={0,1,0,-1};
     int oricolor=grid[row][col];
-    //  bfs(row,col,grid,newcolor);
-     dfs(row,col,grid,newcolor,delerow,delecol,oricolor);
+     bfs(row,col,grid,newcolor);
+    // dfs(row,col,grid,newcolor,delerow,delecol,oricolor);
      
     for(int i=0 ;i <n ;i++){
         for(int j =0 ;j <m ;j++ ){

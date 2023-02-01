@@ -16,14 +16,14 @@ void dfs(int row ,int col,vector<vector<int>>&visi,vector<vector<int>>&vec,vecto
     for(int i=0 ;i<4 ;i++){
         int nrow = row+delerow[i];
         int ncol = col+delecol[i];
-        if(nrow>=0  && nrow<n && ncol>=0 && ncol <m && visi[row][ncol]==0 && vec[nrow][ncol]==1){
+        if(nrow>=0  && nrow<n && ncol>=0 && ncol <m && visi[nrow][ncol]==0 && vec[nrow][ncol]==1){
             dfs(nrow,ncol,visi,vec,res,row0,col0);
         }
     }
 }
 
 int main(){
-    vector<vector<int>>vec={{1,1,0,1,1},{1,0,0,0,0},{0,0,0,1,1},{1,1,0,1,0}};
+    vector<vector<int>>vec={{1,1,0,1,1},{1,0,0,0,0},{0,0,0,0,1},{1,1,0,1,1}};
     int n=vec.size();
     int m=vec[0].size();
      
@@ -39,6 +39,13 @@ int main(){
            }
         }
     }
+
+    // for(auto ele :st){
+    //     for(auto it :ele)cout<<it.first<<" "<<it.second<<" ";
+    //     cout<<endl;
+    // }
+
+
 
     cout<<st.size();
     return 0;

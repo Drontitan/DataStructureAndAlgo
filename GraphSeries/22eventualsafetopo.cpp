@@ -6,7 +6,7 @@ typedef long long ll;
 // we have to find the terminal edges first and edges which are safe 
 // 
 
-// so we will first reverse the edges and then the node havinfg the indegree 0 will the safe node and we will 
+// so we will first reverse the edges and then the node having the indegree 0 will the safe node and we will 
 //start from that then will moving to the  paths we will be reducinfg the indegree of the node which are 
 // connected to the safe nodes
     

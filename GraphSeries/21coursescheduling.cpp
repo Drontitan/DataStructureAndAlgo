@@ -4,9 +4,9 @@ using namespace std;
 typedef long long ll;
 
 
-// here we have ginven the prerequisite array where we were given that which operation is to be preformed when 
+// here we have given the prerequisite array where we were given that which operation is to be preformed when 
 // then we need to apply the topological sort for the topo logical sort it should not have the cycle 
-// if there is cycle we can mnnot perform the topological algorithm 
+// if there is cycle we can not perform the topological algorithm 
 
 // if we cant perform the operations the we have to return false  else true
 
@@ -15,7 +15,6 @@ typedef long long ll;
 //SC- O(N) 
 int main(){
  
-
    vector<vector<int>>pre={{1,0},{2,1},{1,3}};
     int n,e;
     cin>>n>>e;
@@ -24,7 +23,7 @@ int main(){
    int indegree[n]={0};
 
    for(int i=0 ;i <pre.size(); i++){
-    //vec[pre[i][0]].push_back(pre[i][1]);// it is fotwhen it given in right order 
+    //vec[pre[i][0]].push_back(pre[i][1]);// it is for when it given in right order 
     vec[pre[i][1]].push_back(pre[i][0]); // for the left order
    }
 

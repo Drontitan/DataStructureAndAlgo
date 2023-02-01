@@ -37,9 +37,10 @@ void bfs(int row, int col , vector<vector<int>>&visi,vector<vector<int>>grid){
 
 }
 
+
 int main(){
     
-    vector<vector<int>>grid={{0,1,1,0},{0,1,1,0},{0,0,0,0},{1,0,0,1},{1,1,1,1}};
+    vector<vector<int>>grid={{0,1,0,0,0},{0,1,0,0,0},{0,0,0,0,0},{0,0,0,1,1,}};
 
     int n=grid.size();
     int m= grid[0].size();

@@ -58,6 +58,11 @@ int main(){
           }
         }
      }
+
+
+
+
+
     
     bool flag=false;
      for(int i=0 ;i <n;i++){

@@ -6,7 +6,7 @@ typedef long long ll;
 
 // color the all nodes by two color  in such a way that the adjacent node should not have the same color  
 
-// linear graph with no cycle is  alays bipartite
+// linear graph with no cycle is  always bipartite
 
 // any graph with the even cycle length is also the bipartite
 
@@ -18,8 +18,7 @@ typedef long long ll;
 //TC- O(V +2E);
 //Sc -O(V)
 
-bool check(int start, vector<int> vec[], int color[])
-{
+bool check(int start, vector<int> vec[], int color[]){
     queue<int> q;
     q.push(start);
     color[start] = 0;
@@ -51,7 +50,7 @@ bool check(int start, vector<int> vec[], int color[])
 
 bool dfs(int start ,int col, vector<int>vec[] ,int color[]){
 
-     color[start]=col;
+    color[start]=col;
     
     for(auto ele :vec[start]){
         if(color[ele]==-1){
@@ -62,8 +61,7 @@ bool dfs(int start ,int col, vector<int>vec[] ,int color[]){
     return true;
 }
 
-int main()
-{
+int main(){
 
     int n, e;
     cin >> n >> e;

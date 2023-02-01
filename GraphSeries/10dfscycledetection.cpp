@@ -10,7 +10,6 @@ bool dfscycle(int node ,int parent, vector<int>vec[],int visi[]){
     for(auto ele : vec[node]){
          if(!visi[ele]){
             if(dfscycle(ele,node,vec,visi)==true)return true;
-            
         }
         else if (ele!=parent)return true;
     }
