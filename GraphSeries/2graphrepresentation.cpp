@@ -43,6 +43,7 @@ void adjlist(){
 }
 void adjlistforweight(){
     int n,m;
+    
     cin>>n>>m;
     vector<vector<pair<int,int>>>vec(m+1);
     // incase of weighted graph we will storing the pair
