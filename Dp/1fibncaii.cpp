@@ -15,6 +15,7 @@ typedef long long ll;
 // iterative approach using the tabular form  bottom to up 
 // ** time and space complex O(n) O(n)+O(n);
 // int f(int n, vector<int>&dp){
+
 //     dp[0]=0;
 //     dp[1]=1;
 //     for(int i=2;i<=n;i++){
@@ -37,7 +38,6 @@ int f(int n, vector<int>&dp){
         prev=curr;
     }
     return prev;
-
 }
 int main(){
     int n;

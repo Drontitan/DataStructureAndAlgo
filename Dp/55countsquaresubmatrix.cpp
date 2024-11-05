@@ -8,11 +8,9 @@ typedef long long ll;
 //TC- O(N*M)  SC-O(N*M)  
 int main()
 {
-    vector<vector<int>> mat = {{1, 1, 0}, {1, 1, 1}, {1, 1, 1}};
+    vector<vector<int>> mat = {{0, 1, 1,1}, {1, 1, 1,1}, {0,1, 1, 1}};
     int n = mat.size();
     int m = mat[0].size();
-    vector<int> height(m, 0);
-    int maxarea = 0;
     vector<vector<int>> dp(n, vector<int>(m, 0));
     for (int i = 0; i < n; i++)
         dp[i][0] = mat[i][0];

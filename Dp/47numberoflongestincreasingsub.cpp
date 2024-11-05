@@ -34,6 +34,8 @@ int main(){
         }
         maxi= max(maxi,dp1[i]);
     }
+    for(auto ele:count)cout<<ele<<" ";
+
     int number=0;
     for(int i =0 ;i<n;i++){
         if(dp1[i]==maxi)number+=count[i];

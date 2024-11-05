@@ -2,8 +2,8 @@
 using namespace std;
 
 typedef long long ll;
-
-
+// TC O(n+m) // stack as for each node we are traversin the M edges ;
+// https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph/0
 void toposort(int node, vector<pair<int,int>>vec[], int visi[],stack<int>st ){
      visi[node]=1;
       
@@ -29,12 +29,12 @@ int main(){
     }
     stack<int>st;
     int visi[n]={0};
-  for(int i=0 ;i <n ;i++){
-    cout<<i<<" ";
-    for(auto ele :adj[i]){
-        cout<<ele.first<<" "<<ele.second<<endl;
-    }
-  }
+  // for(int i=0 ;i <n ;i++){
+  //   cout<<i<<" ";
+  //   for(auto ele :adj[i]){
+  //       cout<<ele.first<<" "<<ele.second<<endl;
+  //   }
+  // }
    
     for(int i=0 ;i <n; i++){
         if(!visi[i]){

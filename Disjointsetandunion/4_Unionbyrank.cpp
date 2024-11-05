@@ -31,7 +31,7 @@ class Graph{
         if(parent[i]==-1){
             return i;
         }
-        return findset(parent[i],parent);  
+        return parent[i]=findset(parent[i],parent);  
       }
 
 
@@ -40,7 +40,7 @@ class Graph{
             int s1=findset(x,parent);
             int s2 =findset(y,parent);
             if(s1!=s2  ){
-                if(rank[s1]<rank[s2]){
+                if(rank[s1]<rank[s2]){   // attaching the lower rank node to the higher rank node
                     parent[s1]=s2;
                      rank[s2]+=rank[s1];
                 }
@@ -56,7 +56,7 @@ class Graph{
     bool containscycle(){
     // dsu logic to check the cycle in the graph
      int *parent = new int[v+1];
-     int *rank = new int[v];
+     int *rank = new int[v];   // attached the rank 
      for(int i=0; i<v; i++){
         parent[i]=-1;
         rank[i]=1;

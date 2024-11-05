@@ -53,7 +53,5 @@ int main(){
 
    for(auto ele :topo)cout<<ele<<" ";
 
-
-
     return 0;
 }

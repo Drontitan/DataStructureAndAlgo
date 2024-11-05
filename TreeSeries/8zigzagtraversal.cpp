@@ -23,7 +23,7 @@ vector<vector<int>> zigzagorder(Treenode* root){
       bool ltor = true;
       while(!q.empty()){
         int size = q.size();
-        vector<int>level;
+        vector<int>level(size);
         for(int i=0 ; i<size;i++){   // for traversiing the node like  so 1 23 4567 like wise 
             Treenode *node = q.front();
             q.pop();

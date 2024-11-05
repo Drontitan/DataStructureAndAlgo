@@ -21,7 +21,7 @@ int solve(Treenode *root ,int &maxi){
     if(root==NULL)return ;
 
     int left =max(0,solve(root->left,maxi));// here for negative we have taken care that we will 
-    // not comutr the negative value  if foudn we will be retuning the 0 
+    // not counter the negative value  if foudn we will be retuning the 0 
     int right =max(0,solve(root->right,maxi));
 
     maxi=max(maxi,root->val+left+right);

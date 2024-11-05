@@ -15,8 +15,8 @@ typedef long long ll;
 
 bool isPallindrome(int i,int j ,string s){
   
-    while(i>j){
-        if(s[i]!=s[j]){ cout<<"lala<"<<endl;return false;}
+    while(i<=j){
+        if(s[i]!=s[j]){ return false;}
         i++;j--;
     }
     return true;
@@ -34,6 +34,22 @@ int partitionpallin(int i,int n,string &s){
       }
     }
     return mini;
+}
+void solve(int i, string &s  ,vector<vector<string>>&ans,vector<string>&res){
+    if(i==s.size()){
+      ans.push_back(res);
+    }
+    
+
+    for(int ind = i; ind<s.size();ind++){
+
+      if(isPallindrome(i,ind,s)){
+        res.push_back(s.substr(i,ind-i+1));
+        solve(ind+1,s,ans,res);
+        res.pop_back();
+      }
+    }
+
 }
 
 //memoisation
@@ -72,8 +88,15 @@ int partitionpalliniterative(int n,string &s,vector<int>&dp){
 }
   
 int main(){
-    string str="abcd";
+    string str="abcda";
     int n = str.size();
+    vector<vector<string>>ans;
+    vector<string>res;
+    solve(0,str,ans,res);
+    for(auto ele:ans){
+      for(auto it :ele)cout<<it<<" ";
+      cout<<endl;
+    }
     // vector<int>dp(n,-1);
     vector<int>dp(n+1,0);
     // cout<<partitionpallin(0,n,s)-1<<endl;// we are subtracting because of the partition at the end

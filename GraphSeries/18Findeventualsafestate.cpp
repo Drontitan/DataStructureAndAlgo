@@ -8,18 +8,18 @@ typedef long long ll;
 
 // The node which is in cycle and node which are link to the cycle are not safe node apart from these
 // all are safe node 
-
+ 
 
 // TC- O(N +2E)
 //SC- O(n)+O(N)+O(N);
 
-bool dfscycle(int node ,int parent, vector<int>vec[],int visi[] ,int path[],int check[]){
+bool dfscycle(int node , vector<int>vec[],int visi[] ,int path[],int check[]){
     visi[node]=1;
     path[node]=1;
     check[node]=0;
     for(auto ele : vec[node]){
          if(visi[ele]==0){
-            if(dfscycle(ele,node,vec,visi,path,check)==true){
+            if(dfscycle(ele,vec,visi,path,check)==true){
                 check[node]=0;
                 return true;}
             
@@ -53,7 +53,7 @@ int main(){
     bool flag=false;
     for(int i =0 ;i <n; i++){
         if(visi[i]==0){
-         dfscycle(i,-1,vec,visi,path,check);
+         dfscycle(i,vec,visi,path,check);
     }
     }
      for(int i=0; i<n; i++){

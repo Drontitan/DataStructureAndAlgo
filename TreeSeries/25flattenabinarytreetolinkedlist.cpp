@@ -11,6 +11,7 @@ typedef long long ll;
 // approach 1: recursive 
 /*
 
+
 TC-O(N) SC-O(N)
 prev=NULL
 flatten(node){  //  here we will first move towards the right then left 
@@ -18,7 +19,7 @@ flatten(node){  //  here we will first move towards the right then left
   if(node)return NULL;
   flatten(node->right);
   flatten(node->left);
-
+   
   node->right=prev;
   node->left=NULL;
 

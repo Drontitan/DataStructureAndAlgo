@@ -66,4 +66,5 @@ int main(){
      cout<<recursion3d(vec,0,0,c-1,r,c);
      cout<<recursion3dmemo(vec,0,0,c-1,r,c,dp);
     return 0;
+
 }

@@ -26,7 +26,7 @@ Treenode *buildtree(vector<int>&postorder,int poststart,int postend,vector<int>&
 instart,int inend,map<int,int>mp){
     if(poststart>postend || instart>inend)return NULL;
 
-   Treenode * root =new Treenode(postorder[poststart]);
+   Treenode * root =new Treenode(postorder[postend]);
    int inroot = mp[root->val];
    int numsleft =inroot-instart;
 

@@ -3,7 +3,11 @@ using namespace std;
 
 typedef long long ll;
 
-
+struct Treenode {
+    struct Treenode *left;
+    struct Treenode *right;
+    int val;
+};
 // at any node the the node will have tha value equal to the right and left children 
 // node->val = node-left->val+node->right->val;
 // it it not follows then you can increment the node by +1 any  number of times 
@@ -14,12 +18,12 @@ typedef long long ll;
 
 
 //Tc-O(N) SC-O(N)
-void change(Binarytree<int>*root){
-    if(root==NULL)return NULL;
+void change(Treenode  *root){
+    if(root==NULL)return ;
     int child;
     if(root->left)child+=root->left->val;
 
-    if(root->right)child+=root->right-val;
+    if(root->right)child+=root->right->val;
 
     if(child>=root->val)root->val=child;
     else{
@@ -27,8 +31,8 @@ void change(Binarytree<int>*root){
         if(root->right)root->right->val=root->val;
     }
 
-    change(node->left);
-    change(node->right);
+    change(root->left);
+    change(root->right);
    // when the call is returning back 
    // it should take the value of left and right child so we that we have done here 
     int tot=0;

@@ -34,6 +34,9 @@ int main()
         vec[u].push_back(v);
         vec[v].push_back(u);
     }
+
+
+    
     vector<int> dfs;
     int count=0;
     for(int i=1 ;i<=n;i++){

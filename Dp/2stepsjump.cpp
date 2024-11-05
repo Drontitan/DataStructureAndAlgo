@@ -16,6 +16,7 @@ int jump(int n){
    return left+right;
 }
 
+
 // memozation
 int jumpmemo(int n,vector<int>&dp){
     

@@ -16,6 +16,7 @@ bool checkpossibility(string s, string t)
         return false;
     int first = 0;
     int second = 0;
+    cout<<s<<" "<<t<<endl;
     while (first < s.size())
     {
         if (s[first] == t[second])
@@ -50,7 +51,7 @@ int main()
 
         for (int prev = 0; prev < i; prev++)
         {
-            if (checkpossibility(vec[i], vec[prev]) && (1 + dp[prev] > dp[i]))
+            if (checkpossibility(vec[prev], vec[i]) && (1 + dp[prev] > dp[i]))
             {
                 dp[i] = 1 + dp[prev];
             }

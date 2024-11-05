@@ -49,12 +49,12 @@ int main()
         // printbinary(b);
 
         // int c= (a & ((1<<(i))-1));
-        printbinary(-1);
+        // printbinary(-1);
 
         /********/
         // check if the number is the power fo the two 
-        // int n=16;
-        // if(n&(n-1))cout<<"no"<<endl;
+        int n=100;
+        if(!(n&(n-1)))cout<<"YEs"<<endl;
         // else cout<<"yes"<<endl;
     return 0;
 }

@@ -68,7 +68,7 @@ int main()
     int m = str2.size();
     vector<vector<int>> dpit(n + 1, vector<int>(m + 1, 0));
 
-     longestcommonsubiterative(str1, str2, n, m, dpit);
+    longestcommonsubiterative(str1, str2, n, m, dpit);
 
     return 0;
 }

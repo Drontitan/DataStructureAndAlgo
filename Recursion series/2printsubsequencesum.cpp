@@ -43,6 +43,8 @@ void solve2(vector<int>&arr,int i,vector<int>vec,int target){
     
 }
 
+
+
 bool solve3(vector<int>&arr,int i,vector<int>vec,int target,int sum){
 
    if(i>=vec.size()){
@@ -85,14 +87,18 @@ int solve4(vector<int>&arr,int i,vector<int>vec,int target){
     
    return take+nottake;
 }
+
+
 int main(){
     vector<int>arr={1,2,3,4};
     vector<int>ans;
     int target=5;
     int sum=0;
-   //  solve1(ans,0,arr,target,sum);.///
-    // solve2(ans,0,arr,target);
+   //  solve1(ans,0,arr,target,sum);
+   //  solve2(ans,0,arr,target);
+
    //  solve3(ans,0,arr,target,sum);
     cout<<solve4(ans,0,arr,target);
+
     return 0;
 }

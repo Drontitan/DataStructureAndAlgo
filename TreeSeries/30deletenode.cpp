@@ -18,14 +18,14 @@ Treenode *deletenode(Treenode *root,int key ){
     while(root!=NULL){
         if(root->val>key){
             if(root->left!=NULL && root->left->val==key){
-                root->left =findlastright(root->left);
+                root->left =helper(root->left);
                 break;
             }
             else root=root->left;
         }
         else{
             if(root->right!=NULL && root->right->val==key){
-                root->right =findlastright(root->right);
+                root->right =helper(root->right);
                 break;
             }
             else root=root->right;

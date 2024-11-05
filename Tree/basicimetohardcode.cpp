@@ -24,7 +24,7 @@ int main()
      cin >> n;
      int a, b;
      vector<vector<int>> G(n + 1);
-     for (int i = 0; i < n - 1; ++i)
+     for (int i = 0; i < e; ++i)
      {
           cin >> a >> b;
           G[a].push_back(b);

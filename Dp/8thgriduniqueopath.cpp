@@ -18,7 +18,7 @@ int twodpathscount(int i,int j){
     if(i<0|| j<0)return 0;
 
     int up=twodpathscount(i-1,j);
-    int left=twodpathscount(i,j-1);
+    int left=twodpathscount(i,j-1);                              
     return up+left;
 }
 

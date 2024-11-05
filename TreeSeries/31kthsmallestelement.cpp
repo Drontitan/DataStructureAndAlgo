@@ -21,13 +21,13 @@ int kthsmallest(Treenode *root,int k){
      stack<Treenode *>st;
      Treenode *node = root;
      int count=0;
-     while(!st.empty()){
+     while(true){
         if(node){
             st.push(node);
             node=node->left;
      }
      else{
-        if(st.empty()==NULL)break;
+        if(st.empty())break;
         node = st.top();
         st.pop();
         count++;

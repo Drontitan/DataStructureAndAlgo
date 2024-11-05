@@ -8,6 +8,7 @@ struct Treenode {
     struct Treenode *right;
 };
 
+
 // TC- O(N)--  for traversing //SC- O(N)  
 
 //    1 2 3 4 5 6 7 
@@ -18,6 +19,7 @@ vector<vector<int>> Levelorder(Treenode* root){
       queue<Treenode*>q;
       q.push(root);
       while(!q.empty()){
+        
         int size = q.size();
         vector<int>level;
         for(int i=0 ; i<size;i++){   // for traversiing the node like  so 1 23 4567 like wise 
@@ -31,7 +33,6 @@ vector<vector<int>> Levelorder(Treenode* root){
       }
      return vec;
 }
-
 
 
 int main(){

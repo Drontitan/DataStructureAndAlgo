@@ -34,7 +34,7 @@ int permutationscount(string p,string up){
 }
 
 int main(){
-    // permutations("","abc");
-   cout<< permutationscount("","abc");
+    permutations("","abc");
+//    cout<< permutationscount("","abc");
      return 0;
 }

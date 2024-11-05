@@ -3,7 +3,7 @@ using namespace std;
 
 void dfs(int node, map<int, vector<int>>& G, set<int>& visited) {
     visited.insert(node);
-    // cout << node << " ";
+    cout << node << " ";
     for(int neighbour: G[node]) {
         if(visited.count(neighbour) == 0) {
             dfs(neighbour, G, visited);
@@ -13,7 +13,7 @@ void dfs(int node, map<int, vector<int>>& G, set<int>& visited) {
 
 int main() {
     int N,e;
-    cin >>N>>e;
+    cin>>e;
 
     map<int, vector<int>> G;
 
@@ -23,19 +23,18 @@ int main() {
         G[a].push_back(b);
         G[b].push_back(a);
     }
-
+   
     // for(auto node: G) {
     //     cout << node.first << ": ";
     //     for(auto n: node.second) {
     //         cout << n << " ";
     //     }
     // }
-     int nodes=1,count=0;
+     int nodes=0,count=0;
     set<int>visited;
     for(auto node: G) {
         if(visited.count(node.first) == 0) {
             dfs(nodes, G, visited);
-            count++;
         }
     }
     cout<<count;

@@ -95,7 +95,7 @@ int main(){
     vector<vector<int>>dp(n,vector<int>(m,-1));
     int maxi =-1e8;
     for (int j = 0; j <m; j++){
-        // maxi=max(maxi,maximumpathsum(vec,n-1,j));
+        maxi=max(maxi,maximumpathsum(vec,n-1,j));
         // maxi=max(maxi,maximumpathsummemo(vec,n-1,j,dp));/
     }
     // cout<<maxi; 

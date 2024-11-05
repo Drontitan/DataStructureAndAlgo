@@ -4,7 +4,7 @@ using namespace std;
 typedef long long ll;
 
 
-// atmax 2 transaction 2 time buy and sell in the row as we discussed previously 
+// atmax k transaction  k time buy and sell in the row as we discussed previously 
 
 int buyandsellstock(int i, int buy,int cap, vector<int> &vec)
 {

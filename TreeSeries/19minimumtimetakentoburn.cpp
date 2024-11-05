@@ -34,7 +34,7 @@ int findmaxdist(map<BinaryTreenode<int>*,BinaryTreenode<int>*>&mp,BinaryTreenode
                 vis[node->right]=1;
                 q.push(node->right);
             }
-            if(mp[node] && vis[mp[node]]){  //  check if parent pointer exist if exist then check visited 
+            if(mp[node] && !vis[mp[node]]){  //  check if parent pointer exist if exist then check visited 
             // if not move towards it 
                 flag=1;
                 vis[mp[node]]=1;

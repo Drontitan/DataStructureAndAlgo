@@ -66,6 +66,7 @@ int main(){
     for(auto &it :vec)sum+=it;
     int diff=2;
     if((sum-diff)<0 || (sum-diff)%2)return false;
+    // here because sum-diff has to even we can not fraction here 
     int n=vec.size();
     int m= (sum-diff)/2;
     vector<vector<int>>dp(n,vector<int>(m+1,-1));

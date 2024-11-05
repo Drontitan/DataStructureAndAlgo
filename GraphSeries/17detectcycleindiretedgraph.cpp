@@ -39,7 +39,7 @@ int main(){
          if(dfscycle(i,-1,vec,visi,path)==true){
             flag=true;
             break;
-         }
+        }
     }
     }
     if(flag)cout<<"True"<<endl;

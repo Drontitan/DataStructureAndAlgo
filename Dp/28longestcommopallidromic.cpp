@@ -12,7 +12,7 @@ typedef long long ll;
 // max of  both the calls
 
 // dp on strings
-// recursion
+// recursion1
 int longestcommonsub(string str1, string str2, int ind1, int ind2)
 {
     if (ind1 < 0 || ind2 < 0)

@@ -43,17 +43,17 @@ int longestcommonsubiterative(string str1, string str2, int n, int m, vector<vec
             else dp[i][j] = 0; // notmatch
         }
     }
-    for (int i = 0; i <= n; i++)
-    {
-        for (int j = 0; j <= m; j++)
-        {
-           cout<<dp[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    // for (int i = 0; i <= n; i++)
+    // {
+    //     for (int j = 0; j <= m; j++)
+    //     {
+    //        cout<<dp[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
 
     int i=n,j=m;
-    cout<<dp[i-1][j-1]<<endl;
+    // cout<<dp[i-1][j-1]<<endl;
     string s="";
     while(i>0 && j>0){
       if(dp[i][j]==ans )break;
@@ -61,7 +61,7 @@ int longestcommonsubiterative(string str1, string str2, int n, int m, vector<vec
        else j--;
     //   i--,j--;  
      }
-        cout<<i<<j<<endl;
+        // cout<<i<<j<<endl;
          while(i>0 && j>0 ){
          if(str1[i-1]==str2[j-1]){
              s+=str1[i-1];
@@ -76,8 +76,8 @@ int longestcommonsubiterative(string str1, string str2, int n, int m, vector<vec
 
 int main()
 {
-    string str1 = "abb";
-    string str2 = "bba";
+    string str1 = "codeforces";
+    string str2 = "atcoder";
     int n = str1.size();
     int m = str2.size();
     vector<vector<int>> dpit(n + 1, vector<int>(m + 1, 0));

@@ -61,9 +61,10 @@ void longestcommonsubiterative(string str1, string str2, int n, int m, vector<ve
 
 
 int main()
+
 {
-    string str1 = "babad";
-    string str2 = "dabab";
+    string str1 = "codeforces";
+    string str2 = "atcoder";
     int n = str1.size();
     int m = str2.size();
     vector<vector<int>> dpit(n + 1, vector<int>(m + 1, 0));

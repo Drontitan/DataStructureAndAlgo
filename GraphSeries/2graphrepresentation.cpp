@@ -41,11 +41,11 @@ void adjlist(){
        cout<<endl;
     }
 }
+
 void adjlistforweight(){
     int n,m;
-    
     cin>>n>>m;
-    vector<vector<pair<int,int>>>vec(m+1);
+    vector<vector<pair<int,int>>>vec(n+1);
     // incase of weighted graph we will storing the pair
     for(int i=0 ;i <m;i++){
         int u,v,w;

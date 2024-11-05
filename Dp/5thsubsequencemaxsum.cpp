@@ -13,7 +13,7 @@ typedef long long ll;
 int maxsubsum(vector<int>vec,int n){
     if(n==0)return vec[n];
     if(n<0)return 0;
-
+    
     int pick = vec[n]+maxsubsum(vec,n-2);
     int notpick = maxsubsum(vec,n-1);
 
@@ -39,8 +39,8 @@ int maxsubsumiterative(vector<int>vec,int n,vector<int>dp){
        int pick = vec[i];
        if(i>1)pick+=dp[i-2];
        int notpick =dp[i-1];
-       dp[i]=min(pick,notpick);
-   }
+       dp[i]=max(pick,notpick);
+   }                                                                                                                    
    return dp[n-1];
 }
 // spave optimization
@@ -62,6 +62,6 @@ int maxsubssumspace(vector<int>vec){
 int main(){
     vector<int>vec={1,3,4,5,6,7};
     vector<int>dp(6,-1);
-    cout<<maxsubssumspace(vec);
+    cout<<maxsubsummemo(vec,vec.size(),dp);
     return 0;
 }
