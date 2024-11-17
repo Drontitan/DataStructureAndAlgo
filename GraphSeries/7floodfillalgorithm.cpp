@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-// we have to color the pixel attache to it having the same color expect the pixel which are diagonally 
+// we have to color the pixel attach to it having the same color expect the pixel which are diagonally 
 
 
 void bfs(int row,int col,vector<vector<int>>&grid,int newcolor){

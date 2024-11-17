@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// we have reach from src node to the nth[last node] node 
 typedef long long ll;
 
  vector<int> shortestPath(int n, int m, vector<vector<int>>& edges) {

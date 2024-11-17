@@ -26,7 +26,7 @@ typedef long long ll;
                 }
             }
             // nth relaxation to check the negative cycle; // see if we are reducing it after already
-            // there then there is negative cycle 
+            // there then there is negative cycle // because all the relaxation occur in n-1 only
             for(auto ele:edges){
                     int u = ele[0];
                     int v= ele[1];

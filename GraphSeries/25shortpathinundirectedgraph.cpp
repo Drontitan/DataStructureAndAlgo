@@ -32,7 +32,3 @@ vector<int> shortestPath(vector<vector<int>>& edges, int N,int M, int src){
         
         return dis;
 }
-int main(){
-    
-    return 0;
-}

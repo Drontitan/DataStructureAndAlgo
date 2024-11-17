@@ -2,6 +2,8 @@
 using namespace std;
 
 typedef long long ll;
+// https://leetcode.com/problems/cheapest-flights-within-k-stops/
+
 // here it is modifired dijktras as we are storing min dis first we are storing the  stops 
 // because we want to check the stops first then distance and here queue is used because 
 // we are doing +1 ,+2 like in bfs that why we used queue here 

@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-// we have yo find the number of the 1s means the piece of land that are not connected with the boundary 
+// we have to find the number of the 1s means the piece of land that are not connected with the boundary 
 
 //TC- O(N*M *4)+O(N*M)
 //SC-(N*M)

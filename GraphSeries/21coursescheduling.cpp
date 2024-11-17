@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-
+//https://leetcode.com/problems/course-schedule/
 // here we have given the prerequisite array where we were given that which operation is to be preformed when 
 // then we need to apply the topological sort for the topo logical sort it should not have the cycle 
 // if there is cycle we can not perform the topological algorithm 

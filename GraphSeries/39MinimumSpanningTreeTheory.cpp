@@ -39,3 +39,34 @@ int main(){
     
     return 0;
 }
+// to print the mst 
+
+// int spanningTree(int V, vector<vector<int>> adj[])
+//     {
+//         priority_queue<pair<int,pair<int,int>>,vector<pair<int,pair<int,int>>>,
+//         greater<pair<int,pair<int,int>>>>q;
+        
+//         q.push({0,{0,-1}}); // wieght , node, parent // this used when we havee to print
+//         // the mst here if we dont have to print just print the sum then dont use it 
+        
+//         vector<int>visi(V,0);
+//         int sum =0;
+//         vector<pair<int,int>>mst;
+//         while(!q.empty()){
+//             int w  = q.top().first;
+//             int node = q.top().second.first;
+//             int parent = q.top().second.second;
+//             q.pop();
+//             if(visi[node])continue;
+//             visi[node]=1;
+//             sum+=w;
+            
+//             if(parent!=-1)mst.push_back({parent,node});
+//             for(auto ele:adj[node]){
+//                 q.push({ele[1],{ele[0],node}});
+//             }
+//         }
+        
+//         // for(auto ele:mst)cout<<ele.first<<" "<<ele.second<<endl;
+//         return sum;
+//     }

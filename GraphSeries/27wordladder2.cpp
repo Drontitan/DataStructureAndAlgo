@@ -7,7 +7,7 @@ typedef long long ll;
         
         queue<vector<string>>q;
         unordered_set<string>st(wordList.begin(),wordList.end());
-        q.push({beginWord});
+        q.push({beginWord}); // here we are storing as a list of string 
         vector<string>useonlevel;
         useonlevel.push_back(beginWord);
         vector<vector<string>>ans;
@@ -21,6 +21,7 @@ typedef long long ll;
             if(vec.size()>level){
                 level++;
                 for(auto ele :useonlevel )st.erase(ele);
+                useonlevel.clear();
             }
 
             string word = vec.back();
@@ -30,6 +31,7 @@ typedef long long ll;
                 if(ans.size()==0){
                     ans.push_back(vec);
                 }
+                // as we have one sequence size so we will use to compare for new ones
                 else if (ans[0].size()==vec.size()){
                     ans.push_back(vec);
                 }
@@ -43,7 +45,9 @@ typedef long long ll;
                         q.push(vec);
                         // make as visited on the level;
                         useonlevel.push_back(word);
-                        vec.pop_back();
+                        vec.pop_back(); // see as on level Ex:-  bat , pat
+                        // then bat , cat // so it can change on current level as we are pushing 
+                        // in to queue , we dont need to worry here we can change 
                     }
                 }
                 word[i]=original;

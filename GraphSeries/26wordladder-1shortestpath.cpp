@@ -36,6 +36,8 @@ typedef long long ll;
                     
                     if(st.find(word)!=st.end()){
                         st.erase(word);
+                        // to avoid revisting same word in future 
+// avoiding cycles
                         q.push({word,step+1});
                     }
                 }

@@ -2,6 +2,7 @@
 using namespace std;
 
 typedef long long ll;
+// https://www.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1
 // here we are again storing the steps and nod in queue
 // but this time we are storing the steps in dis which ever has smallest;
 int minimumMultiplications(vector<int>& arr, int start, int end) {

@@ -59,20 +59,6 @@ bool dfs(int start , int col , vector<int>vec[], int color[]){
     return true;
 }
 
-
-// bool dfs(int start ,int col, vector<int>vec[] ,int color[]){
-
-//     color[start]=col;
-    
-//     for(auto ele :vec[start]){
-//         if(color[ele]==-1){
-//         if(dfs(ele,!col,vec,color)==false)return false;
-//         }
-//         else if(color[ele]==color[start])return false;
-//     }
-//     return true;
-// }
-
 int main(){
 
     int n, e;
